@@ -14,11 +14,17 @@ export type Portfolio = {
 };
 
 // =========================
+// 環境変数（NEXT_PUBLIC に統一）
+// =========================
+const serviceDomain = process.env.NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN;
+const apiKey = process.env.NEXT_PUBLIC_MICROCMS_API_KEY;
+
+// =========================
 // 一覧取得関数
 // =========================
 export const fetchPortfolio = async (): Promise<{ contents: Portfolio[] }> => {
-  const res = await fetch(`https://${process.env.MICROCMS_SERVICE_DOMAIN}.microcms.io/api/v1/portfolio`, {
-    headers: { "X-API-KEY": process.env.MICROCMS_API_KEY as string },
+  const res = await fetch(`https://${serviceDomain}.microcms.io/api/v1/portfolio`, {
+    headers: { "X-API-KEY": apiKey as string },
     cache: "no-store", // SSGにしたい場合は 'force-cache'
   });
 
@@ -39,13 +45,10 @@ export const fetchPortfolio = async (): Promise<{ contents: Portfolio[] }> => {
 // 詳細取得関数
 // =========================
 export const fetchPortfolioDetail = async (slug: string): Promise<Portfolio> => {
-  const res = await fetch(
-    `https://${process.env.MICROCMS_SERVICE_DOMAIN}.microcms.io/api/v1/portfolio?filters=slug[equals]${slug}`,
-    {
-      headers: { "X-API-KEY": process.env.MICROCMS_API_KEY as string },
-      cache: "no-store", // SSGにしたい場合は 'force-cache'
-    }
-  );
+  const res = await fetch(`https://${serviceDomain}.microcms.io/api/v1/portfolio?filters=slug[equals]${slug}`, {
+    headers: { "X-API-KEY": apiKey as string },
+    cache: "no-store", // SSGにしたい場合は 'force-cache'
+  });
 
   if (!res.ok) {
     throw new Error("データの取得に失敗しました");
