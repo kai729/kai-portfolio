@@ -23,7 +23,7 @@ const apiKey = process.env.NEXT_PUBLIC_MICROCMS_API_KEY;
 // 一覧取得関数
 // =========================
 export const fetchPortfolio = async (): Promise<{ contents: Portfolio[] }> => {
-  const res = await fetch(`https://${serviceDomain}.microcms.io/api/v1/portfolio`, {
+  const res = await fetch(`https://${serviceDomain}.microcms.io/api/v1/portfolio?limit=100`, {
     headers: { "X-API-KEY": apiKey as string },
     cache: "no-store", // SSGにしたい場合は 'force-cache'
   });
