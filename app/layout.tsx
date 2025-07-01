@@ -35,7 +35,7 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ja">
+    <html lang="ja" className={inter.className}>
       <head>
         <link rel="apple-touch-icon" href="/profile.JPG" />
 
