@@ -60,3 +60,22 @@
   background-color: #266dfc;
   transform: scale(1.05);
 }
+
+.fixedBackButton {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background-color: #3f8efc;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.fixedBackButton:hover {
+  background-color: #2563eb;
+  transform: scale(1.05);
+}

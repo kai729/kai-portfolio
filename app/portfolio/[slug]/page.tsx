@@ -64,7 +64,7 @@ export default async function PortfolioDetailPage({ params }: Props) {
 
       {/* 戻るボタン */}
       <div className={styles.backButtonContainer}>
-        <Link href="/portfolio" className={styles.backButton}>
+        <Link href="/portfolio" className={styles.fixedBackButton}>
           実績一覧に戻る
         </Link>
       </div>
