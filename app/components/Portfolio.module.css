@@ -1,0 +1,206 @@
+/*：ポートフォリオ一覧ページCSS */
+
+.container {
+  min-height: 100vh;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f9fafb;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #102a43;
+  margin-bottom: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.cardLink {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: scale(1.02);
+}
+
+.link {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  color: #3f8efc;
+}
+
+.image {
+  width: 100%;
+  max-width: 300px;
+  height: 192px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 0 auto 1rem auto;
+  display: block;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.content {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: #334e68;
+  max-height: 4.5em;
+  overflow: hidden;
+}
+
+.pcFrame {
+  background-color: #fff; /* フレームの背景色 */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0.75rem;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pcHeader {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.pcDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.dotRed {
+  background-color: #ff5f56;
+}
+
+.dotYellow {
+  background-color: #ffbd2e;
+}
+
+.dotGreen {
+  background-color: #27c93f;
+}
+
+.pcImage {
+  width: 100%;
+  max-width: 300px;
+  height: 192px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.buttonContainer {
+  margin-top: 8rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem; /* ボタン間のスペース */
+  flex-wrap: wrap; /* スマホで折り返しも対応 */
+}
+.buttonContainer a {
+  width: 140px;
+  text-align: center;
+}
+
+.githubButton {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 24px;
+  background-color: #24292e;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.githubButton:hover {
+  background-color: #333;
+  transform: scale(1.05);
+}
+
+.backButtonContainer {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.backButton {
+  background-color: #3f8efc;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.backButton:hover {
+  background-color: #266dfc;
+  transform: scale(1.05);
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pcFrame {
+  position: relative;
+  max-width: 300px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 1rem;
+
+  /* アニメーションここ！ */
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.pcImage {
+  position: absolute;
+  top: 15%; /* 要調整 */
+  left: 10%;
+  width: 80%;
+  height: 70%;
+  object-fit: cover;
+  border-radius: 4px;
+}

@@ -1,0 +1,17 @@
+/* 共通ボタンデザイン */
+.btn {
+  background-color: #4f46e5; /* Indigo-600 */
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none; /* Linkでも適用されるように */
+}
+
+.btn:hover {
+  background-color: #4338ca; /* Indigo-700 */
+  transform: scale(1.05);
+  transition: all 0.2s ease;
+}

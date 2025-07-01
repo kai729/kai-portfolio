@@ -1,0 +1,62 @@
+/* ：ポートフォリオ詳細ページ CSS */
+
+.container {
+  min-height: 100vh;
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #f9fafb;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #102a43;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.image {
+  display: block;
+  max-width: 600px;
+  width: 100%;
+  border-radius: 12px;
+  margin: 0 auto 2rem auto;
+}
+
+.content {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #334e68;
+}
+
+.content a {
+  color: #3f8efc;
+  text-decoration: underline;
+}
+
+.content a:hover {
+  opacity: 0.8;
+}
+
+.linkContainer {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.siteLink {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 24px;
+  background-color: #3f8efc;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.siteLink:hover {
+  background-color: #266dfc;
+  transform: scale(1.05);
+}

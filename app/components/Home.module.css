@@ -1,0 +1,111 @@
+/* トップページ CSS */
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+}
+
+.image {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #3f8efc;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #102a43;
+  text-align: center;
+}
+
+.catchCopy {
+  font-size: 1.5rem;
+  color: #3f8efc;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.description {
+  font-size: 1.1rem;
+  text-align: center;
+  max-width: 600px;
+  margin-bottom: 2rem;
+  color: #334e68;
+}
+
+.techStack {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.techBadge {
+  background-color: #3f8efc;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column; /* スマホは縦並び */
+}
+
+.buttonContainer a {
+  width: 140px;
+  text-align: center;
+}
+
+.button {
+  background-color: #1265d8;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+  background-color: #266dfc;
+  transform: scale(1.05);
+}
+
+/* ===== レスポンシブ (768px以上で適用) ===== */
+@media (min-width: 768px) {
+  .image {
+    width: 240px;
+    height: 240px;
+  }
+
+  .title {
+    font-size: 4rem;
+  }
+
+  .catchCopy {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1.3rem;
+  }
+
+  .buttonContainer {
+    flex-direction: row; /* PCは横並び */
+  }
+}
